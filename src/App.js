@@ -1,11 +1,29 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Save, Delete } from "@material-ui/icons/";
-import { ButtonGroup, Button, Checkbox } from "@material-ui/core";
+import {
+  ButtonGroup,
+  Button,
+  Checkbox,
+  FormControlLabel,
+} from "@material-ui/core";
 
 function App() {
+  const [checked, setChecked] = React.useState(true);
   function CheckBoxExample() {
-    return <div>Test</div>;
+    return (
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+            inputProps={{ "aria-label": "secondary checkbox" }}
+          />
+        }
+        label="testing CheckBox"
+      />
+    );
   }
   return (
     <div className="App">
