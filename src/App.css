@@ -14,7 +14,7 @@
 }
 
 input {
-  color: white;
+  color: white !important;
 }
 .App-header {
   background-color: #282c34;

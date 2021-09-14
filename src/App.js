@@ -7,6 +7,7 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
+  TextField,
 } from "@material-ui/core";
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TextField
+          variant="outlined"
+          type="email"
+          placeholder="test@test@gmail.com"
+        />
+
         <CheckBoxExample />
         <ButtonGroup variant="contained" size="large" color="secondary">
           <Button color="primary" startIcon={<Save />}>
